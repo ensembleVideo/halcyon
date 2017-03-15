@@ -34,8 +34,8 @@ namespace Halcyon.Web.HAL.Json {
             if(halJsonMediaTypes == null) halJsonMediaTypes = new string[] { HalJsonType };
 
             this.serializerSettings = serializerSettings;
-
-            this.jsonFormatter = new JsonOutputFormatter(serializerSettings, ArrayPool<Char>.Create());
+            
+            this.jsonFormatter = new JsonOutputFormatter(this.serializerSettings, ArrayPool<Char>.Create());
 
             this.halJsonMediaTypes = halJsonMediaTypes;
 
